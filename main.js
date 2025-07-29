@@ -2,7 +2,6 @@ import "./style.css";
 import Experience from "./Experience/Experience.js";
 import * as THREE from 'three';
 
-const experience = new Experience(document.querySelector(".experience-canvas"));
 
 // Create scene
 const scene = new THREE.Scene();
