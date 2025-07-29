@@ -11,9 +11,11 @@ html, body{
 }
 
 body {
-  background: var(--color-background);
+  background: linear-gradient(135deg, #e5a1aa 0%, #7AD0AC 100%);
   color: var(--color-text);
   min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  transition: background 0.7s cubic-bezier(0.4,0,0.2,1);
 }
 
 /* body{
@@ -156,10 +158,13 @@ body .page {
   position: relative;
 }
 
-body .page-wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 32px 16px;
+  padding: 48px 24px;
+  background: rgba(255,255,255,0.25);
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  backdrop-filter: blur(8px);
 }
 
 /* Preloader Stuff */
@@ -211,20 +216,39 @@ body .page-wrapper {
   top: 32px;
   right: 32px;
   z-index: 1000;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.35);
   border-radius: 32px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
-  padding: 8px 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  padding: 12px 24px;
   opacity: 1;
+  backdrop-filter: blur(6px);
 }
 
 .sun-wrapper, 
-.moon-wrapper{
-  display: flex;
-  flex-direction: row;
+.page-wrapper{
+  position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 24px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 32px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    backdrop-filter: blur(8px);
+}
+    margin: 0 auto;
+    padding: 48px 24px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 32px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    backdrop-filter: blur(8px);
   justify-content: center;
   align-items: center;
-  color: var(--color-text);
+  background: linear-gradient(90deg, var(--color-pink), var(--color-green));
+  border-radius: 999px;
+  margin: 0px 16px;
+  border: none;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  transition: background 0.3s;
 }
 
 .toggle-button{
@@ -235,27 +259,13 @@ body .page-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-pink);
+  background: linear-gradient(90deg, var(--color-pink), var(--color-green));
   border-radius: 999px;
   margin: 0px 16px;
   border: none;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  transition: background 0.3s;
 }
-
-.toggle-circle{
-  position: absolute;
-  left: 6px;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  background-color: var(--color-background);
-  transition: all 0.2s ease-in-out;
-}
-
-.toggle-button:hover .toggle-circle{
-  transform: scale(0.9);
-}
-
 .slide{
   left: 31px;
 }
@@ -271,11 +281,13 @@ body .page-wrapper {
   width: 100%;
   max-width: 900px;
   margin: 0 auto 48px auto;
-  background-color: var(--color-background);
+  background: rgba(255,255,255,0.45);
   overflow: visible;
   border-radius: 32px;
-  box-shadow: 0 2px 24px rgba(0,0,0,0.04);
-  padding: 48px 32px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  padding: 56px 40px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.18);
 }
 
 .left{
@@ -358,13 +370,15 @@ body .page-wrapper {
 
 .section-title-text{
   display: block;
-  font-size: 40px;
-  font-weight: 500;
+  font-size: 48px;
+  font-weight: 700;
   transform-origin: left;
-  transform: skewY(25deg);
+  transform: skewY(15deg);
   z-index: 5;
   text-transform: uppercase;
   color: var(--color-pink);
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px rgba(229,161,170,0.18);
 }
 
 .styleOne,
@@ -432,19 +446,27 @@ body .page-wrapper {
 }
 
 .hero-main-title{
-  font-size: 64px;
+  font-size: 72px;
   color: var(--color-text);
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-shadow: 0 4px 24px rgba(131,149,205,0.18);
 }
 
 .hero-main-description{
-  font-size: 18px;
+  font-size: 22px;
   color: var(--color-text);
+  font-weight: 500;
+  margin-top: 12px;
+  text-shadow: 0 2px 8px rgba(122,208,172,0.12);
 }
 
 .hero-second-subheading{
-  font-size: 32px;
+  font-size: 36px;
   text-transform: uppercase;
   color: var(--color-text);
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 
@@ -479,29 +501,29 @@ body .page-wrapper {
 
 @media (max-width: 968px){
   .page-wrapper {
-    padding: 16px 4px;
+    padding: 8px 2px;
   }
   .section {
-    padding: 24px 8px;
+    padding: 16px 4px;
     max-width: 100vw;
   }
   .hero-wrapper {
-    padding: 16px 4px;
+    padding: 8px 2px;
     max-width: 100vw;
   }
   .hero-main-title {
-    font-size: 32px;
+    font-size: 36px;
   }
   .hero-main-description {
     font-size: 16px;
   }
   .hero-second-subheading {
-    font-size: 16px;
+    font-size: 18px;
   }
   .toggle-bar {
-    top: 8px;
-    right: 8px;
-    padding: 4px 8px;
+    top: 4px;
+    right: 4px;
+    padding: 2px 4px;
   }
 }
 
